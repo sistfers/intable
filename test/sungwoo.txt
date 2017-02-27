@@ -1,0 +1,2 @@
+
+SELECT seq_no, type, sonnim_id, store_id, title, content, writedate, readcount, parent

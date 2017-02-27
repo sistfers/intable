@@ -1,0 +1,87 @@
+INSERT
+INTO
+  sonnim
+  (
+    email,
+    password,
+    phone,
+    birthday,
+    name
+  )
+  VALUES
+  (
+    'magoon85@me.com',
+    'magoon85',
+    '010-9658-9116',
+    to_date('1985-01-15', 'YYYY-MM-DD'),
+    '마제오'
+  )
+;
+
+INSERT
+INTO
+  store
+  (
+    email,
+    password,
+    phone,
+    name,
+    zonecode,
+    sido,
+    sigungu,
+    address1,
+    address2,
+    maxbooking,
+    imageuri1,
+    imageuri2,
+    imageuri3,
+    imageuri4,
+    imageuri5,
+    category,
+    note
+  )
+  VALUES
+  (
+    'magoon85@me.com',
+    'magoon85',
+    '010-9658-9116',
+    '마제오',
+    '04100',
+    '서울',
+    '마포구',
+    '서울 마포구 백범로 18',
+    '미화빌딩 2, 3층',
+    '15',
+    'http://magoon.co.kr/image/magoon85@me.com.1.png',
+    'http://magoon.co.kr/image/magoon85@me.com.2.png',
+    'http://magoon.co.kr/image/magoon85@me.com.3.png',
+    'http://magoon.co.kr/image/magoon85@me.com.4.png',
+    'http://magoon.co.kr/image/magoon85@me.com.5.png',
+    '한식',
+    '좋아요<br>좋습니다'
+  )
+;
+
+INSERT
+INTO
+  booking
+  (
+    sonnim_id,
+    store_id,
+    bookdate,
+    bookstate,
+    booktime,
+    bookperson,
+    note
+  )
+  VALUES
+  (
+    '1000000000',
+    '1000000010',
+    to_date('2017-04-20', 'YYYY-MM-DD'),
+    '0',
+    '18',
+    '16',
+    '정말<br>좋나요?'
+  )
+;
