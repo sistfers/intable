@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="html_new" deleted="false" description="html 5" enabled="true" id="org.eclipse.wst.html.ui.templates.html5" name="New HTML File (5)">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="${encoding}"&gt;
+&lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+${cursor}
+&lt;/body&gt;
+&lt;/html&gt;</template></templates>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource
+		name="jdbc/sist"
+		auth="Container"
+		type="javax.sql.DataSource"
+		driverClassName="oracle.jdbc.OracleDriver"
+		url="jdbc:oracle:thin:@magoon.co.kr:1521:sist"
+		username="sky"
+		password="sky"
+		maxTotal="20"
+		maxIdle="10"
+		maxWaitMillis="-1" />
+</Context>
