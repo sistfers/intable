@@ -31,7 +31,7 @@ public class QnADao implements WorkArea {
 	private ResultSet rs = null;
 
 	private String jdbc_driver = "oracle.jdbc.OracleDriver";
-	private String jdbc_url = "jdbc:oracle:thin:@magoon.co.kr:1521:orcl";
+	private String jdbc_url = "jdbc:oracle:thin:@magoon.co.kr:1521:sist";
 	
 	
 
