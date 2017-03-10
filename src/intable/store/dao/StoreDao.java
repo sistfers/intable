@@ -30,7 +30,7 @@ public class StoreDao implements WorkArea {
 		try {
 			Class.forName(jdbc_driver);
 			conn = DriverManager.getConnection(jdbc_url, "sky", "sky");
-			//conn = ((javax.sql.DataSource) (new javax.naming.InitialContext()).lookup("java:/comp/env/jdbc/orcl")).getConnection();
+			//conn = ((javax.sql.DataSource) (new javax.naming.InitialContext()).lookup("java:/comp/env/jdbc/sist")).getConnection();
 		} catch (Exception e) {
 			System.out.println("connect(): " + e.getMessage());
 			e.printStackTrace();
@@ -85,7 +85,7 @@ public class StoreDao implements WorkArea {
 			StringBuilder sql = new StringBuilder();
 			
 			// sql 작성
-				
+			
 			sql.append("	SELECT TT1.RNUM,                           ");
 			sql.append("	  TT1.STORE_ID,                            ");
 			sql.append("	  TT1.NAME,                                ");
@@ -108,16 +108,16 @@ public class StoreDao implements WorkArea {
 			sql.append("	    ) T1                                   ");
 			sql.append("	  )TT1                                     ");
 			sql.append("	WHERE RNUM < 5                             ");
-
-//			// 관리자 제거 @author magoon 시작
-//			sql.append("  WHERE store_id > 999999999                                ");
-//			// 관리자 제거 @author magoon 끝
-//			
-//			sql.append("  ORDER BY                                                  ");
-//			sql.append("    (SELECT SUM(STARPOINT) FROM REVIEW                      ");
-//			sql.append("    ) DESC                                                  ");
-//			sql.append("  ) B                                                       ");
-//			sql.append("WHERE RNUM < " + 5);
+			
+			//			// 관리자 제거 @author magoon 시작
+			//			sql.append("  WHERE store_id > 999999999                                ");
+			//			// 관리자 제거 @author magoon 끝
+			//			
+			//			sql.append("  ORDER BY                                                  ");
+			//			sql.append("    (SELECT SUM(STARPOINT) FROM REVIEW                      ");
+			//			sql.append("    ) DESC                                                  ");
+			//			sql.append("  ) B                                                       ");
+			//			sql.append("WHERE RNUM < " + 5);
 			
 			pstmt = conn.prepareStatement(sql.toString());
 			System.out.println("sql=" + sql.toString());
