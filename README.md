@@ -22,7 +22,7 @@ inTable 서비스 개발 프로젝트.
 
 - 박성우
 
-- 박하늘: 팀장
+- 박하늘: Project Manager
 
 - 조영숙
 
@@ -318,21 +318,21 @@ inTable 서비스 개발 프로젝트.
 
 
 
-### Database UML
+### Entity-Relationship Diagram
 
-![Database](http://sistfers.github.io/intable/modeling/intable.png)
-
-
+![Entity-Relationship](http://sistfers.github.io/intable/modeling/intable.png)
 
 
-### Class UML
+
+
+### Class Diagram
 
 ![Class](http://sistfers.github.io/intable/modeling/class.png)
 
 
 
 
-### Sequence UML
+### Sequence Diagram
 
 ![Sequence](http://sistfers.github.io/intable/modeling/sequence.png)
 

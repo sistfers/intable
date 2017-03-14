@@ -4,7 +4,11 @@
 
 - [Code Conventions for Java Programming Language 번역](http://kwangshin.pe.kr/blog/java-code-conventions-자바-코딩-규칙)
 
-- [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
+- [Google Java Style Guide](http://google.github.io/styleguide/javaguide.html)
+
+- [Google HTML/CSS Style Guide](http://google.github.io/styleguide/htmlcssguide.html)
+
+- [Google JavaScript Style Guide](http://google.github.io/styleguide/jsguide.html)
 
 - [Maven Code Style And Code Conventions](http://maven.apache.org/developers/conventions/code.html)
 
