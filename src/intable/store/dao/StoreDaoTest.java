@@ -38,7 +38,7 @@ public class StoreDaoTest {
 		try {
 			String driver = "oracle.jdbc.OracleDriver";
 			
-			String url = "jdbc:oracle:thin:@magoon.co.kr:1521:orcl";
+			String url = "jdbc:oracle:thin:@magoon.co.kr:1521:sist";
 			String user = "sky";
 			String password = "sky";
 			

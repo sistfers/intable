@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>sist.fers</groupId>
+	<artifactId>intable</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>inTable</name>
+	<description>JSP Project 2조 삼시n끼 (n > 3) inTable</description>
+	<url>http://sistfers.github.io/intable</url>
+	<properties>
+		<!-- Dependency Property // -->
+		<!-- java // -->
+		<java-version>1.8</java-version>
+		<!-- // java -->
+		<!-- javax-api // -->
+		<servlet-api-version>3.1.0</servlet-api-version>
+		<jsp-api-version>2.3.1</jsp-api-version>
+		<jstl-api-version>1.2.1</jstl-api-version>
+		<el-api-version>3.0.0</el-api-version>
+		<mail-api-version>1.5.6</mail-api-version>
+		<json-api-version>1.0</json-api-version>
+		<transaction-api-version>1.2</transaction-api-version>
+		<!-- javax-api // -->
+		<!-- // javax -->
+		<mail-version>1.5.6</mail-version>
+		<jta-version>1.1</jta-version>
+		<inject-version>1</inject-version>
+		<!-- // javax -->
+		<!-- test // -->
+		<junit-version>4.12</junit-version>
+		<!-- // test -->
+		<!-- log // -->
+		<commons-logging-version>1.2</commons-logging-version>
+		<log4j-version>2.8.1</log4j-version>
+		<slf4j-version>1.7.24</slf4j-version>
+		<logback-version>1.2.1</logback-version>
+		<!-- // log -->
+		<!-- jdbc // -->
+		<oracle-version>12.1.0.2</oracle-version>
+		<mysql-version>5.1.41</mysql-version>
+		<!-- // jdbc -->
+		<!-- spring // -->
+		<spring-version>4.3.7.RELEASE</spring-version>
+		<!-- // spring -->
+		<!-- hibernate // -->
+		<hibernate-version>5.2.8.Final</hibernate-version>
+		<!-- // hibernate -->
+		<!-- mybatis // -->
+		<mybatis-version>3.4.2</mybatis-version>
+		<mybatis-spring-version>1.3.1</mybatis-spring-version>
+		<!-- // mybatis -->
+		<!-- commons // -->
+		<commons-dbcp2-version>2.1.1</commons-dbcp2-version>
+		<commons-fileupload-version>1.3.2</commons-fileupload-version>
+		<!-- // commons -->
+		<!-- tomcat // -->
+		<tomcat-version>8.5.11</tomcat-version>
+		<!-- // tomcat -->
+		<!-- glassfish // -->
+		<jstl-version>1.2.4</jstl-version>
+		<json-version>1.0.4</json-version>
+		<!-- // glassfish -->
+		<!-- taglibs // -->
+		<taglibs-version>1.2.5</taglibs-version>
+		<!-- // taglibs -->
+		<!-- cos // -->
+		<cos-version>26Dec2008</cos-version>
+		<!-- // cos -->
+		<!-- // Dependency Property -->
+		<!-- Custom Property // -->
+		<context-root>${project.artifactId}</context-root>
+		<webapp-directory>${project.basedir}/webapp</webapp-directory>
+		<javadoc-directory>${project.basedir}/docs/api</javadoc-directory>
+		<!-- // Custom Property -->
+		<!-- User Property // -->
+		<encoding>UTF-8</encoding>
+		<outputEncoding>UTF-8</outputEncoding>
+		<locales>ko-KR</locales>
+		<downloadSources>true</downloadSources>
+		<downloadJavadocs>true</downloadJavadocs>
+		<destDir>${javadoc-directory}</destDir>
+		<m2eclipse.wtp.contextRoot>${context-root}</m2eclipse.wtp.contextRoot>
+		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>${outputEncoding}</project.reporting.outputEncoding>
+		<maven.compiler.source>${java-version}</maven.compiler.source>
+		<maven.compiler.target>${java-version}</maven.compiler.target>
+		<maven.compiler.compilerArgument>-Xlint:all</maven.compiler.compilerArgument>
+		<maven.compiler.showWarnings>true</maven.compiler.showWarnings>
+		<maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
+		<!-- // User Property -->
+	</properties>
+	<dependencies>
+		<!-- javax-api // -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet-api-version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>${jsp-api-version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp.jstl</groupId>
+			<artifactId>javax.servlet.jsp.jstl-api</artifactId>
+			<version>${jstl-api-version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.el</groupId>
+			<artifactId>javax.el-api</artifactId>
+			<version>${el-api-version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- <dependency> <groupId>javax.mail</groupId> <artifactId>javax.mail-api</artifactId> 
+			<version>${mail-api-version}</version> <scope>provided</scope> </dependency> -->
+		<dependency>
+			<groupId>javax.json</groupId>
+			<artifactId>javax.json-api</artifactId>
+			<version>${json-api-version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- <dependency> <groupId>javax.transaction</groupId> <artifactId>javax.transaction-api</artifactId> 
+			<version>${transaction-api-version}</version> <scope>provided</scope> </dependency> -->
+		<!-- javax-api // -->
+		<!-- // javax -->
+		<!-- <dependency> <groupId>com.sun.mail</groupId> <artifactId>javax.mail</artifactId> 
+			<version>${mail-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>javax.transaction</groupId> <artifactId>jta</artifactId> 
+			<version>${jta-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>javax.inject</groupId> <artifactId>javax.inject</artifactId> 
+			<version>${inject-version}</version> </dependency> -->
+		<!-- // javax -->
+		<!-- test // -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- // test -->
+		<!-- log // -->
+		<!-- <dependency> <groupId>commons-logging</groupId> <artifactId>commons-logging</artifactId> 
+			<version>${commons-logging-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>org.apache.logging.log4j</groupId> <artifactId>log4j-api</artifactId> 
+			<version>${log4j-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>org.apache.logging.log4j</groupId> <artifactId>log4j-core</artifactId> 
+			<version>${log4j-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-api</artifactId> 
+			<version>${slf4j-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-log4j12</artifactId> 
+			<version>${slf4j-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-jdk14</artifactId> 
+			<version>${slf4j-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-nop</artifactId> 
+			<version>${slf4j-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-simple</artifactId> 
+			<version>${slf4j-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-jcl</artifactId> 
+			<version>${slf4j-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>ch.qos.logback</groupId> <artifactId>logback-core</artifactId> 
+			<version>${logback-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>ch.qos.logback</groupId> <artifactId>logback-classic</artifactId> 
+			<version>${logback-version}</version> </dependency> -->
+		<!-- // log -->
+		<!-- jdbc // -->
+		<dependency>
+			<groupId>oracle.jdbc</groupId>
+			<artifactId>OracleDriver</artifactId>
+			<version>${oracle-version}</version>
+			<scope>system</scope>
+			<systemPath>${webapp-directory}/WEB-INF/lib/ojdbc7.jar</systemPath>
+		</dependency>
+		<!-- <dependency> <groupId>com.oracle.jdbc</groupId> <artifactId>ojdbc7</artifactId> 
+			<version>${oracle-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> 
+			<version>${mysql-version}</version> </dependency> -->
+		<!-- // jdbc -->
+		<!-- spring // -->
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-webmvc</artifactId> 
+			<version>${spring-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-test</artifactId> 
+			<version>${spring-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-jdbc</artifactId> 
+			<version>${spring-version}</version> </dependency> -->
+		<!-- // spring -->
+		<!-- hibernate // -->
+		<!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-core</artifactId> 
+			<version>${hibernate-version}</version> </dependency> -->
+		<!-- // hibernate -->
+		<!-- mybatis // -->
+		<!-- <dependency> <groupId>org.mybatis</groupId> <artifactId>mybatis</artifactId> 
+			<version>${mybatis-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>org.mybatis</groupId> <artifactId>mybatis-spring</artifactId> 
+			<version>${mybatis-spring-version}</version> </dependency> -->
+		<!-- // mybatis -->
+		<!-- commons // -->
+		<!-- <dependency> <groupId>org.apache.commons</groupId> <artifactId>commons-dbcp2</artifactId> 
+			<version>${commons-dbcp2-version}</version> </dependency> -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${commons-fileupload-version}</version>
+		</dependency>
+		<!-- // commons -->
+		<!-- tomcat // -->
+		<!-- <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-jdbc</artifactId> 
+			<version>${tomcat-version}</version> </dependency> -->
+		<!-- // tomcat -->
+		<!-- glassfish // -->
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>javax.servlet.jsp.jstl</artifactId>
+			<version>${jstl-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.json</artifactId>
+			<version>${json-version}</version>
+		</dependency>
+		<!-- // glassfish -->
+		<!-- taglibs // -->
+		<!-- <dependency> <groupId>org.apache.taglibs</groupId> <artifactId>taglibs-standard-spec</artifactId> 
+			<version>${taglibs-version}</version> </dependency> -->
+		<!-- <dependency> <groupId>org.apache.taglibs</groupId> <artifactId>taglibs-standard-impl</artifactId> 
+			<version>${taglibs-version}</version> </dependency> -->
+		<!-- // taglibs -->
+		<!-- cos // -->
+		<!-- <dependency> <groupId>com.oreilly.servlet</groupId> <artifactId>cos</artifactId> 
+			<version>${cos-version}</version> <scope>system</scope> <systemPath>${webapp-directory}/WEB-INF/lib/cos.jar</systemPath> 
+			</dependency> -->
+		<!-- // cos -->
+	</dependencies>
+	<repositories>
+		<!-- Oracle Maven Repository // -->
+		<repository>
+			<id>maven.oracle.com</id>
+			<name>oracle-maven-repo</name>
+			<url>https://maven.oracle.com</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+		</repository>
+		<!-- // Oracle Maven Repository -->
+	</repositories>
+	<pluginRepositories>
+		<!-- Oracle Maven Repository // -->
+		<pluginRepository>
+			<id>maven.oracle.com</id>
+			<name>oracle-maven-repo</name>
+			<url>https://maven.oracle.com</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+		</pluginRepository>
+		<!-- // Oracle Maven Repository -->
+	</pluginRepositories>
+	<build>
+		<finalName>${project.artifactId}-${project.version}</finalName>
+		<directory>${project.basedir}/target</directory>
+		<sourceDirectory>${project.basedir}/src</sourceDirectory>
+		<outputDirectory>${project.build.directory}/classes</outputDirectory>
+		<resources>
+			<resource>
+				<directory>${project.basedir}/resources</directory>
+				<targetPath>${project.build.outputDirectory}</targetPath>
+			</resource>
+			<resource>
+				<directory>${project.build.sourceDirectory}</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+				<targetPath>${project.build.outputDirectory}</targetPath>
+			</resource>
+		</resources>
+		<testSourceDirectory>${project.basedir}/test</testSourceDirectory>
+		<testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
+		<testResources>
+			<testResource>
+				<directory>${project.basedir}/test-resources</directory>
+				<targetPath>${project.build.testOutputDirectory}</targetPath>
+			</testResource>
+			<testResource>
+				<directory>${project.build.testSourceDirectory}</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+				<targetPath>${project.build.testOutputDirectory}</targetPath>
+			</testResource>
+		</testResources>
+		<scriptSourceDirectory>${project.basedir}/webapp</scriptSourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<warSourceDirectory>${webapp-directory}</warSourceDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<reporting>
+		<outputDirectory>${project.build.directory}/site</outputDirectory>
+	</reporting>
+</project>
