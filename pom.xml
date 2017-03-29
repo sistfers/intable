@@ -72,7 +72,7 @@
 		<!-- // cos -->
 		<!-- // Dependency Property -->
 		<!-- Custom Property // -->
-		<context-root>${project.artifactId}</context-root>
+		<context-root>/</context-root>
 		<webapp-directory>${project.basedir}/webapp</webapp-directory>
 		<javadoc-directory>${project.basedir}/docs/api</javadoc-directory>
 		<!-- // Custom Property -->
